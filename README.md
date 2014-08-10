@@ -3,6 +3,10 @@ Namespacer
 
 A simple utility for creating namespaces.
 
+Namespacer is mostly meant for the browser, but it also works with AMD and 
+CommonJS modules, although namespaces usually are not necessary in those
+environments.
+
 Installation
 ------------
 
@@ -17,12 +21,6 @@ bower install namespacer
 ```
 npm install namespacer
 ```
-
-----
-
-Namespacer is mostly meant for the browser, but it also works with AMD and 
-CommonJS modules, although namespaces usually are not necessary in those
-environments.
 
 Usage
 -----
