@@ -29,8 +29,6 @@ if(!RootNamespace.level1.level2) {
 }
 ```
 
-Because of this, use of namespaces tends to be shallow. For most other 
-
 With Namespacer, it becomes simplified:
 
 ```js
