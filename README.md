@@ -18,8 +18,11 @@ bower install namespacer
 npm install namespacer
 ```
 
-Namespacer works with AMD and CommonJS modules, although namespaces usually are
-not necessary in those environments.
+----
+
+Namespacer is mostly meant for the browser, but it also works with AMD and 
+CommonJS modules, although namespaces usually are not necessary in those
+environments.
 
 Usage
 -----
