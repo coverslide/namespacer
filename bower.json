@@ -1,0 +1,25 @@
+{
+  "name": "namespacer",
+  "version": "0.0.0",
+  "authors": [
+    "Richard Hoffman <coverslide@gmail.com>"
+  ],
+  "description": "A simple way to declare and extend namespaces",
+  "main": "namespacer.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "namespace"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
