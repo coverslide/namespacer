@@ -33,7 +33,7 @@ With Namespacer, it becomes simplified:
 
 ```js
 //use Namespacer.createNamespace() once to declare a root namespace
-window.RootNamespace = Namespacer.createNamespace();
+RootNamespace = Namespacer.createNamespace();
 
 //Add or extend namespaces to your heart's content
 RootNamespace('mywebapp')('category')('level1')('level2').property = 'blah';
@@ -41,7 +41,7 @@ RootNamespace('mywebapp')('category')('level1')('level2').property = 'blah';
 
 ```js
 //You can also use Namespacer() as a shortcut
-window.RootNamespace = Namespacer();
+RootNamespace = Namespacer();
 
 //use this for any type of value you would like,
 var MyClass = RootNamespace('mywebapp')('category')('level1')('level2').MyClass = function(){};
