@@ -21,4 +21,27 @@ test('it puts the lotion on its skin', function (t) {
     t.equal(RootNamespace.level1.value, 'Level 1 value');
     t.equal(RootNamespace.zzy.value, 'Zzy value');
     t.end();
-})
+});
+
+if (typeof Proxy != 'undefined') {
+    test('or else it gets the hose again', function (t) {
+        var RootNamespace = Namespacer.createProxy();
+
+        RootNamespace.level1.level2.value = 'Level 2 value';
+        RootNamespace['level1.1'].level2.value = 'Level 1.1.2 value';
+        //console.log(Object.getOwnPropertyDescriptor({a:1}, 'a'));
+
+        t.equal(typeof RootNamespace, 'object');
+        t.ok('level1' in RootNamespace);
+        t.ok('level2' in RootNamespace.level1);
+        t.ok('level2' in RootNamespace['level1']);
+        t.equal(2, Object.getOwnPropertyNames(RootNamespace).length);
+        t.notEqual(-1, Object.getOwnPropertyNames(RootNamespace).indexOf('level1'));
+        t.notEqual(-1, Object.getOwnPropertyNames(RootNamespace).indexOf('level1.1'));
+        t.equal(typeof RootNamespace.level1, 'object');
+        t.equal(typeof RootNamespace.level1.level2, 'object');
+        t.equal(typeof RootNamespace.level1.level2.value, 'string');
+        t.equal(RootNamespace.level1.level2.value, 'Level 2 value');
+        t.end();
+    });
+}
