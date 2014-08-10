@@ -53,7 +53,8 @@ Best Practices
 --------------
 
 Use the method invocation for adding namespaces, but dot notation can be used
-for accessing properties.
+for accessing properties. This is better for cases when we can expect that
+namespace to exist.
 
 ```js
 var instance = new RootNamespace.mywebapp.category.level1.level2.MyClass();
